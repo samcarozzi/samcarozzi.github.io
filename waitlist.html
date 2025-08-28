@@ -32,9 +32,21 @@
     }
     .qrPanel p {
       color: #444;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       font-size: 1rem;
       line-height: 1.4;
+    }
+    .qrPanel a.formLink {
+      display: inline-block;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0066cc;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+    .qrPanel a.formLink:hover {
+      color: #004999;
     }
     .qrPanel img {
       width: 240px;
@@ -60,6 +72,14 @@
   <div class="qrPanel">
     <h1>Join the Waitlist</h1>
     <p>Scan this QR code to secure your spot on our waitlist and get early access to Membrain AI.</p>
+
+    <!-- Added Google Form link -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSex4LRc6drG2G0WjBJd4gA8DuQSUKoF8tUnfghxfcWrZFvfvg/viewform?usp=header" 
+       target="_blank" 
+       class="formLink">
+      👉 Fill Out the Waitlist Form
+    </a>
+
     <img src="frame.png" alt="Waitlist QR Code">
     <br>
     <a href="index.html" class="backBtn">← Back to Home</a>
