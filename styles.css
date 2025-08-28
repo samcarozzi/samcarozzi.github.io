@@ -684,3 +684,64 @@
   .sendBtn { width: 100%; }
   .featuresGrid { grid-template-columns: 1fr; }
 }
+
+
+/* 1) Kill horizontal scroll from big ASCII <pre>s so layout stays centered */
+html, body { margin: 0; padding: 0; overflow-x: hidden; }
+pre { margin: 0; }
+
+/* 2) Make anchor buttons behave like their React <button> counterparts */
+.navBtn,
+.loginBtn,
+.signupBtn,
+.tryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3) Ensure the main containers are truly centered without side drift */
+.main,
+.companiesContainer,
+.useCases,
+.enterpriseWhy {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 4) Match React’s centered text blocks exactly */
+.heroTitle,
+.heroSubtitle,
+.useCasesTitle,
+.enterpriseTitle,
+.enterpriseSubtitle {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 5) Prevent overlays from affecting centering (they’re decorative only) */
+.ballOverlayWrapper,
+.squiggleOverlayWrapper,
+.asciiWrapper,
+.asciiWrapperSmall,
+.asciiWrapperScreen,
+.asciiWrapperScreen2,
+.asciiWrapperEnterprise {
+  pointer-events: none;
+}
+
+/* 6) Keep nav content snug like the React version */
+.navContent { padding-left: 4px; padding-right: 4px; }
+
+/* 7) Make sure vertical guide lines align to your 1200px content width */
+.left  { left:  calc(50% - 600px); }  /* 1200 / 2  */
+.right { right: calc(50% - 600px); }
+
+/* 8) If any icon/text links look a pixel high/low, normalize line-height */
+.navBtn, .loginBtn, .signupBtn, .tryBtn { line-height: 1; }
+
+/* 9) Optional: if any ASCII still nudges layout on some browsers, clamp width */
+.asciiLayer, .asciiLayerSmall, .asciiLayerScreen, .asciiLayerScreen2, .asciiLayerEnterprise {
+  max-width: 100vw;
+}
