@@ -583,7 +583,7 @@
   line-height: 10px;
   white-space: pre;
   color: #8e8e8e;
-  opacity: 0.6;
+  opacity: 0.4;
   transform: translateX(40%) scaleX(-1);
   pointer-events: none;
   user-select: none;
@@ -600,7 +600,7 @@
   font-size: 10px;
   line-height: 10px;
   color: #8e8e8e;
-  opacity: 0.6;
+  opacity: 0.4;
   pointer-events: none;
   user-select: none;
   will-change: transform, opacity;
@@ -617,7 +617,7 @@
   font-size: 10px;
   line-height: 10px;
   color: #8e8e8e;
-  opacity: 0.6;
+  opacity: 0.4;
   pointer-events: none;
   user-select: none;
   will-change: transform, opacity;
@@ -634,7 +634,7 @@
   font-size: 10px;
   line-height: 10px;
   color: #8e8e8e;
-  opacity: 0.6;
+  opacity: 0.4;
   pointer-events: none;
   user-select: none;
   will-change: transform, opacity;
