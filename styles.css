@@ -610,7 +610,7 @@
 .asciiLayerScreen {
   position: absolute;
   left: 0;
-  top: -2%;
+  top: 0;
   transform: translateX(30%) scaleX(1);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   white-space: pre;
@@ -626,7 +626,7 @@
 .asciiWrapperScreen2 { position: relative; }
 .asciiLayerScreen2 {
   position: absolute;
-  right: -4%;
+  right: 0;
   top: 0;
   transform: translateX(1%) scaleX(-1);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
