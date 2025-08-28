@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Membrain AI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="/silver_ball.png" />
+  <style>
+    /* Page background dots (kept inline so it shows even if CSS is cached late) */
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background-color: white;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='0.75' fill='%23e3e3e3'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top banner -->
+    <div class="banner">
+      We’ve launched the world’s first Multimodal, Infinite Context Model —
+      <span class="bannerLink" id="learnMoreLink">learn more →</span>
+    </div>
+
+    <!-- NAV -->
+    <nav class="navbar">
+      <div class="navContent">
+        <div class="navLeft">
+          <a class="logo" href="/">
+            <img src="/silver_ball.png" alt="Membrain AI logo" width="30" height="30" style="margin-right:3px" />
+            <h2>Membrain AI</h2>
+          </a>
+          <a class="navBtn" href="/pricing">Pricing</a>
+          <button class="navBtn" id="enterpriseBtn" type="button">Enterprise</button>
+          <a class="navBtn" href="/learn">Learn</a>
+        </div>
+        <div class="navButtons">
+          <a class="loginBtn" href="/login">Sign In</a>
+          <a class="signupBtn" href="/signup">Get Started</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="hero">
+        <div class="heroContent">
+          <!-- Decorative ball overlay -->
+          <div class="ballOverlayWrapper">
+            <img
+              src="/silver_ball_transparent.png"
+              alt="Decorative"
+              class="ballOverlay"
+            />
+          </div>
+
+          <h1 class="heroTitle">Build an AI Team Without Writing Code</h1>
+          <p class="heroSubtitle">
+            Type once. Train instantly. Your AI coworkers will learn, remember,
+            and get to work in minutes.
+          </p>
+
+          <div class="ctaButtons">
+            <button class="demoBtn" id="demoBtn" type="button">Get a Demo</button>
+            <a class="tryBtn" href="/signup">Try It Now</a>
+          </div>
+
+          <!-- CHAT DEMO CARD -->
+          <div class="chatDemo">
+            <div class="chatHeader">
+              <div class="chatControls">
+                <div class="toggleContainer">
+                  <label class="toggle">
+                    <input type="checkbox" id="publicToggle" checked />
+                    <span class="toggleSlider"></span>
+                  </label>
+                  <span class="toggleLabel" id="toggleLabel">Public Chat</span>
+                </div>
+                <button class="uploadBtn" id="uploadBtn" type="button" title="Upload">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7,10 12,15 17,10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Upload
+                </button>
+              </div>
+            </div>
+
+            <div class="chatBody">
+              <div class="placeholderText" id="rotatingText">
+                Start making agents for free...
+              </div>
+            </div>
+
+            <div class="chatInput">
+              <input
+                id="chatInput"
+                type="text"
+                placeholder="Ask your agent anything..."
+                autocomplete="off"
+              />
+              <button class="sendBtn" id="sendBtn" type="button" aria-label="Send">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 2L11 13"></path>
+                  <polygon points="22,2 15,22 11,13 2,9"></polygon>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vertical guide lines -->
+      <div class="verticalLine left"></div>
+      <div class="verticalLine right"></div>
+
+      <!-- Squiggle overlay -->
+      <div class="squiggleOverlayWrapper">
+        <img src="/squiggle.png" alt="Decorative squiggle" class="squiggleOverlay" />
+      </div>
+
+      <!-- COMPANIES -->
+      <section class="companies">
+        <div class="companiesContainer">
+          <div class="companiesSlider">
+            <div class="companyGroup">
+              <div class="companyLogo">Georgia Tech</div>
+              <div class="companyLogo">sponsorx</div>
+              <div class="companyLogo">customer x1</div>
+              <div class="companyLogo">customer x2</div>
+              <div class="companyLogo">customer x3</div>
+              <div class="companyLogo">customer x4</div>
+              <div class="companyLogo">customer x5</div>
+            </div>
+            <!-- duplicate group for seamless loop -->
+            <div class="companyGroup">
+              <div class="companyLogo">Georgia Tech</div>
+              <div class="companyLogo">sponsorx</div>
+              <div class="companyLogo">customer x1</div>
+              <div class="companyLogo">customer x2</div>
+              <div class="companyLogo">customer x3</div>
+              <div class="companyLogo">customer x4</div>
+              <div class="companyLogo">customer x5</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES / USE CASES -->
+      <section class="features" style="position:relative">
+        <div class="useCasesHeader">
+          <div class="smallLabel">OUR VALUE</div>
+          <h2 class="useCasesTitle">An AI Agent That Finally Delivers. For Everyone.</h2>
+          <p class="useCasesSubtitle">
+            One-click, no-code agent creation with built-in memory—no pipelines, no dev work, no data wrangling.
+          </p>
+        </div>
+
+        <!-- ASCII decoration (top/large) -->
+        <div class="asciiWrapper" aria-hidden="true">
+          <pre class="asciiLayer asciiLayerClone">
+                                                                                                                                               
+                                                                                                                                               
+                                                                                                                                               
+                                                                                                                                               
+                                                                                                                                               
+                                                                                                                              .     .          
+                                                             ..     ..+                                                      
+                                                                     .:.                                                      
+                                                              ..     ..         .::                                           
+                                                              +..   ..:          :.                                           
+                                                            .:..::.  ..          ..                                           
+                                                            .--:::.  ..     ...  .:.           ..                             
+                                           ..               .:+=-::.:.     . ...-.::.         ..                              
+                                           ::....           .:--+::..: ......:+....:.     :.. ..                              
+                                           .......            ::-=::::     ..:-:-...:     .--..::          .........          
+                           ..  .             . .              ..::-:-..      .-+-:::..    ...::::.        .: ...::.:..        
+                      .  -... ....:           .   .            .--=+-::.      :-=-:....  .  .:..::      .:---:::::-::....    
+                      ..::........::=.....    ...:-..        .:-=--+=-:.       ..--:..=::.... . .:..  ..:---::::---=:::..:...
+             ..........::::.:::::::-::.-..  ...::--==:.      ..-::-+==-:...      .-::.......   ..--:. ..:=+==.---=-+-:::::::-..
+         . .....::......:: ::::-::.---=+-:..::-+==++X=-:.   ..:-::-=-== ---..   .:.--::..       .:-==::=--X==-----====--::+:::+...
+         ..-....-:..::-::=-=-:-::--===++=-==-----== X+=-:.::-==----+==+XX+=-::.:+--==--::.      .:-+X=----+X=-=------===--::-:...:.
+         ....::::...:-:-==+++=++==+++XX++==++--+-+==++++=-===+=---:-==+X:XXX+=-:-=-==++=-:.     .:-=+=- -=X+X+===+---==--==--:..::...+....+
+        ..:::---.::.---=+==XXXXXXXX+XX++==++===--+===:+X+====+=--::--=+XXXXXXX+==++==+XX+=: ::::--=+++X++X+XXXX+=----==++.+=--::+::::+. ::.=...
+        .:::-==-------=X+++XXXXXXXXXXX++==++.==-==-:-==+X++==+=-=--=++++X++:X:X+++X+-+X X+=---=-==+=+++XXXXX+XX=+=--=X++XXX==---::-+-::::.:..-..
+        ..:::---.::.---=+==XXXXXXXX+XX++==++===--+===:+X+====+=--::--=+XXXXXXX+==++==+XX+=: ::::--=+++X++X+XXXX+=----==++.+=--::+::::+. ::.=...
+         ....::::...:-:-==+++=++==+++XX++==++--+-+==++++=-===+=---:-==+X:XXX+=-:-=-==++=-:.     .:-=+=- -=X+X+===+---==--==--:..::...+....+     
+         ..-....-:..::-::=-=-:-::--===++=-==-----== X+=-:.::-==----+==+XX+=-::.:+--==--::.      .:-+X=----+X=-=------===--::-:...:. ....        
+         . .....::......:: ::::-::.---=+-:..::-+==++X=-:.   ..:-::-=-== ---..   .:.--::..       .:-==::=--X==-----====--::+:::+...              
+             ..........::::.:::::::-::.-..  ...::--==:.      ..-::-+==-:...      .-::.......   ..--:. ..:=+==.---=-+-:::::::-..                 
+                      ..::........::=.....    ...:-..        .:-=--+=-:.       ..--:..=::.... . .:..  ..:---::::---=:::..:...                   
+                      .  -... ....:           .   .            .--=+-::.      :-=-:....  .  .:..::      .:---:::::-::....                       
+                           ..  .             . .              ..::-:-..      .-+-:::..    ...::::.        .: ...::.:..                          
+                                           .......            ::-=::::     ..:-:-...:     .--..::          .........                            
+                                           ::....           .:--+::..: ......:+....:.     :.. ..                                                
+                                           ..               .:+=-::.:.     . ...-.::.         ..                                                
+                                                            .--:::.  ..     ...  .:.           ..                                               
+                                                            .:..::.  ..          ..                                                             
+                                                              +..   ..:          :.                                                             
+                                                              ..     ..         .::                                                             
+                                                                     .:.                                                                        
+                                                              ..     ..+                                                                        
+                                                               .     .                                                                          
+          </pre>
+        </div>
+
+        <div class="featuresGrid">
+          <div class="feature">
+            <div class="featureIcon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M9 12l2 2 4-4"></path>
+                <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"></path>
+              </svg>
+            </div>
+            <h3>No-Code Agents</h3>
+            <p>Anyone can build agents, no developers or technical skills required.</p>
+          </div>
+
+          <div class="feature">
+            <div class="featureIcon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 2v20"></path>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3>Infinite Memory AI</h3>
+            <p>Create intelligent agents that understand unlimited context and provide accurate responses</p>
+          </div>
+
+          <div class="feature">
+            <div class="featureIcon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M3 5v14c0 3 4.5 4 9 4s9-1 9-4V5"></path>
+                <path d="M3 12c0 3 4.5 4 9 4s9-1 9-4"></path>
+              </svg>
+            </div>
+            <h3>Your Data</h3>
+            <p>We ingest and structure your database behind the scenes</p>
+          </div>
+
+          <div class="feature">
+            <div class="featureIcon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M16 22h2a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"></path>
+                <polyline points="14,2 14,8 20,8"></polyline>
+                <circle cx="8" cy="16" r="6"></circle>
+                <path d="m14 19.5 3 3"></path>
+              </svg>
+            </div>
+            <h3>Instant Deploy</h3>
+            <p>Deploy your agents instantly with secure APIs and monitoring</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Smaller ASCII -->
+      <div class="asciiWrapperSmall" aria-hidden="true">
+        <pre class="asciiLayerSmall">
+                   .     .                               
+                   ..     ..+..                              
+                          .:.                                
+                   ..     ..     ..                          
+                   +..   ..:   ..+.                          
+                 .:..::.  ..  ..::..                          
+                 .--:::.  ..  .:::--.                         
+        ..       .:+=-.:.  .:.::-=:       ..                  
+        ::....   .:--+:..:..:..:+--:.   ....::                
+        .......    :-=::::....::::=-:    .......              
+    ..  .             . .      . .             .  ..          
+   .  -:....:           .   .   .           :....-  .         
+..:........=.....    ...-:...    .....=::........::..::::.........::::.          
+................::::::::.-::.--......-:::-::::.::::..........::.....::::..... 
+          ::::  .....:::.---=+--=---.::.::::......::.....::::........::::..:::........       
+           ..-....:--:-::-===++===--:::-::-....-..::::..................             
+         ....::::...--=++==+++XX+++==++==-...::::............          
+       :::---.::---==+X+XX+XXXXXXXX==+===.::..:.             
+     .:::.---==--------+++XXXXXXXXXXX+X=---==---.:::  
+      .:::.---==---=X+++XXXXXXXXXXX+++--------==---.:::       
+       :::---.::---==+X+XX+XXXXXXXX==+===.::..:.              
+         ....::::...--=++==+++XX+++==++==-...::::....         
+           ..-....:--:-::-===++===--:::-::-....-..            
+                .....:::.---=+--=---.::.::::...
+                .....:::.--.::.::::...
+                    .....:::...
+                           :..
+        </pre>
+      </div>
+
+      <div class="sectionDivider" aria-hidden="true"></div>
+
+      <!-- WHY MEMBRAIN / Enterprise Grid -->
+      <section class="useCases">
+        <div class="enterpriseHeader">
+          <div class="smallLabel">WHY MEMBRAIN AI</div>
+          <h2 class="enterpriseTitle">Affordable, no-code, memory-native AI platform.</h2>
+          <p class="enterpriseSubtitle">
+            The Enterprise-Grade platform designed to help you scale AI solutions efficiently, securely, and rapidly.
+          </p>
+        </div>
+
+        <div class="enterpriseGrid">
+          <div class="enterpriseCard">
+            <h4 class="enterpriseCardTitle">One-Click Deployment</h4>
+            <p class="enterpriseCardText">
+              Using Membrain AI is the fastest way to deploy AI solutions at scale: 10x faster than building in-house.
+            </p>
+            <div class="cardFooter">001</div>
+          </div>
+          <div class="enterpriseCard">
+            <h4 class="enterpriseCardTitle">Cost Efficiency</h4>
+            <p class="enterpriseCardText">
+              Building AI solutions with Membrain AI is on average 98% less expensive than having an in-house team.
+            </p>
+            <div class="cardFooter">002</div>
+          </div>
+          <div class="enterpriseCard">
+            <h4 class="enterpriseCardTitle">Chat and Create</h4>
+            <p class="enterpriseCardText">
+              Anyone can build and manage agents, no developers required.
+            </p>
+            <div class="cardFooter">003</div>
+          </div>
+          <div class="enterpriseCard">
+            <h4 class="enterpriseCardTitle">Memory-Native Architecture</h4>
+            <p class="enterpriseCardText">
+              Agents remember context across sessions for smarter, persistent interactions.
+            </p>
+            <div class="cardFooter">004</div>
+          </div>
+          <div class="enterpriseCard">
+            <h4 class="enterpriseCardTitle">One-Click Deployment</h4>
+            <p class="enterpriseCardText">
+              Go from raw data to live agents in minutes, no pipelines or delays.
+            </p>
+            <div class="cardFooter">005</div>
+          </div>
+          <div class="enterpriseCard">
+            <h4 class="enterpriseCardTitle">On-premise Deployment</h4>
+            <p class="enterpriseCardText">
+              Self-hosted options give you complete control over your data while still enabling instant AI delivery.
+            </p>
+            <div class="cardFooter">006</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional large ASCII backdrops -->
+      <div class="asciiWrapperScreen" aria-hidden="true">
+        <pre class="asciiLayerScreen">                   
+                   .     .                               
+                   ..     ..+..                              
+                          .:.                                
+                   ..     ..     ..                          
+                   +..   ..:   ..+.                          
+                 .:..::.  ..  ..::..                          
+                 .--:::.  ..  .:::--.                         
+        ..       .:+=-.:.  .:.::-=:       ..                  
+        ::....   .:--+:..:..:..:+--:.   ....::                
+        .......    :-=::::....::::=-:    .......              
+    ..  .             . .      . .             .  ..          
+   .  -:....:           .   .   .           :....-  .         
+..:........=.....    ...-:...    .....=::........::..::::.........::::.          
+................::::::::.-::.--......-:::-::::.::::..........::.....::::..... 
+          ::::  .....:::.---=+--=---.::.::::......::.....::::........::::..:::........       
+           ..-....:--:-::-===++===--:::-::-....-..::::..................             
+         ....::::...--=++==+++XX+++==++==-...::::............          
+       :::---.::---==+X+XX+XXXXXXXX==+===.::..:.             
+     .:::.---==--------+++XXXXXXXXXXX+X=---==---.:::  
+      .:::.---==---=X+++XXXXXXXXXXX+++--------==---.:::       
+       :::---.::---==+X+XX+XXXXXXXX==+===.::..:.              
+         ....::::...--=++==+++XX+++==++==-...::::....         
+           ..-....:--:-::-===++===--:::-::-....-..            
+                .....:::.---=+--=---.::.::::...
+                .....:::.--.::.::::...
+                 .....:::...
+        </pre>
+      </div>
+
+      <div class="asciiWrapperScreen2" aria-hidden="true">
+        <pre class="asciiLayerScreen2">                   
+                   .     .                               
+                   ..     ..+..                              
+                          .:.                                
+                   ..     ..     ..                          
+                   +..   ..:   ..+.                          
+                 .:..::.  ..  ..::..                          
+                 .--:::.  ..  .:::--.                         
+        ..       .:+=-.:.  .:.::-=:       ..                  
+        ::....   .:--+:..:..:..:+--:.   ....::                
+        .......    :-=::::....::::=-:    .......              
+    ..  .             . .      . .             .  ..          
+   .  -:....:           .   .   .           :....-  .         
+..:........=.....    ...-:...    .....=::........::..::::.........::::.          
+................::::::::.-::.--......-:::-::::.::::..........::.....::::..... 
+          ::::  .....:::.---=+--=---.::.::::......::.....::::........::::..:::........       
+           ..-....:--:-::-===++===--:::-::-....-..::::..................             
+         ....::::...--=++==+++XX+++==++==-...::::............          
+       :::---.::---==+X+XX+XXXXXXXX==+===.::..:.             
+     .:::.---==--------+++XXXXXXXXXXX+X=---==---.:::  
+      .:::.---==---=X+++XXXXXXXXXXX+++--------==---.:::       
+       :::---.::---==+X+XX+XXXXXXXX==+===.::..:.              
+         ....::::...--=++==+++XX+++==++==-...::::....         
+           ..-....:--:-::-===++===--:::-::-....-..            
+                .....:::.---=+--=---.::.::::...
+                .....:::.--.::.::::...
+                 .....:::...
+        </pre>
+      </div>
+
+      <div class="asciiWrapperEnterprise" aria-hidden="true">
+        <pre class="asciiLayerEnterprise">                                          
+                                          + ..       .       .  
+                                    .       .       .       .       .                
+                                    ..     ..+..     ..     ..+..     ..     ..+..          
+                        .:.              .:.                      
+                              ..     ..     ..     ..     ..     ..     ..     ..     
+                            +..   ..:   ..+.   +..   ..:   ..+.   +..   ..:   ..+.  
+                          .:..::.  ..  ..::.. .:..::.  ..  ..::.. .:..::.  ..  ..::..
+                                .--:::.  ..  .:::--. .--:::.  ..  .:::--. .--:::.  ..  .:::--.
+                       ..     .:+=-.:.  .:.::-=:       ..     .:+=-.:.  .:.::-=:       ..   
+                  ::.... .:--+:..:..:..:+--:.   ....::   .:--+:..:..:..:+--:.   ....:: 
+                .......  :-=::::....::::=-:    .......   :-=::::....::::=-:    .......
+.         .   .             . .      . .             . .      . .             . ..
+              .  -:....:           .   .   .           :....-  .   .   .           :....-  .
+                  :::........::::..:::........  ..:........=.....    ...-:...    .....=::........::..    ...-:..
+              ....::::........::::..:::........  ................::::::::.-::.--......-:::-::::.::::..........::::::::.-::.--......
+          ....::::........::::..:::........  ::::  .....:::.---=+--=---.::.::::......::.....::::  .....:
+        ..-....:--:-::-===++===--:::-::-....-..::::..-....:--:-::-===++===--:::-::-....-.. 
+      ....::::...--=++==+++XX+++==++==-...::::....::::...--=++==+++XX+++==++==-...::::...
+           :::---.::---==+X+XX+XXXXXXXX==+===.::..:.:::---.::---==+X+XX+XXXXXXXX==+===.::..:. 
+.:::.---==--------+++XXXXXXXXXXX+X=---==---.:::.---==--------+++XXXXXXXXXXX+X=---==
+  .:::.---==---=X+++XXXXXXXXXXX+++--------==---.:::.---==---=X+++XXXXXXXXXXX+++-----
+              :::---.::---==+X+XX+XXXXXXXX==+===.::..:.:::---.::---==+X+XX+XXXXXXXX==+===.::..:. 
+  ....::::...--=++==+++XX+++==++==-...::::....::::...--=++==+++XX+++==++==-...::::...
+..-....:--:-::-===++===--:::-::-....-..::::..-....:--:-::-===++===--:::-::-....-.. 
+                 ::::  .....:::.---=+--=---.::.::::......::.....::::  .....:::.---=+--=---.::.::::..
+          ................::::::::.-::.--......-:::-::::.::::..........::::::::.-::.--......
+..:........=.....    ...-:...    .....=::........::..    ...-:...    .....=::....
+.  -:....:           .   .   .           :....-  .   .   .           :....-  .
+..   .             . .      . .             . .      . .             . ..
+ .......  :-=::::....::::=-:    .......   :-=::::....::::=-:    .......
+      ::.... .:--+:..:..:..:+--:.   ....::   .:--+:..:..:..:+--:.   ....:: 
+      ..     .:+=-.:.  .:.::-=:       ..     .:+=-.:.  .:.::-=:       ..   
+        .--:::.  ..  .:::--. .--:::.  ..  .:::--. .--:::.  ..  .:::--.
+             .:..::.  ..  ..::.. .:..::.  ..  ..::.. .:..::.  ..  ..::..  
+                 +..   ..:   ..+.   +..   ..:   ..+.   +..   ..:   ..+.  
+                  ..     ..     ..     ..     ..     ..     ..     ..     
+                        .:.              .:.                      
+                ..     ..+..     ..     ..+..     ..     ..+..          
+                   .       .       .       .       .                
+        </pre>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footerContent">
+        <p>© 2025 MembrainAI. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Minimal JS to replicate your React logic -->
+  <script>
+    // Rotating placeholder text
+    const rotatingTexts = [
+      "Start making agents for free...",
+      "Build no-code AI solutions...",
+      "Create intelligent chatbots...",
+      "Deploy RAG pipelines instantly..."
+    ];
+    const rotatingEl = document.getElementById("rotatingText");
+    let idx = 0;
+    setInterval(() => {
+      idx = (idx + 1) % rotatingTexts.length;
+      rotatingEl.textContent = rotatingTexts[idx];
+    }, 3000);
+
+    // Public/Private toggle label
+    const toggle = document.getElementById("publicToggle");
+    const toggleLabel = document.getElementById("toggleLabel");
+    toggle.addEventListener("change", () => {
+      toggleLabel.textContent = toggle.checked ? "Public Chat" : "Private Chat";
+    });
+
+    // Demo + Enterprise alerts
+    document.getElementById("demoBtn").addEventListener("click", () => {
+      alert("Book a demo");
+    });
+    document.getElementById("enterpriseBtn").addEventListener("click", () => {
+      alert("Enterprise solutions");
+    });
+
+    // "Upload" button → go to /signup (like your navigate('/signup'))
+    document.getElementById("uploadBtn").addEventListener("click", () => {
+      window.location.href = "/signup";
+    });
+
+    // Chat input: Enter or Send → go to /login if not empty (mimic your React)
+    const chatInput = document.getElementById("chatInput");
+    const sendBtn = document.getElementById("sendBtn");
+    function attemptSend() {
+      if (chatInput.value.trim()) {
+        window.location.href = "/login";
+      }
+    }
+    chatInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") attemptSend();
+    });
+    sendBtn.addEventListener("click", attemptSend);
+
+    // Top banner "learn more"
+    document.getElementById("learnMoreLink").addEventListener("click", () => {
+      window.location.href = "/learn";
+    });
+  </script>
+</body>
+</html>
